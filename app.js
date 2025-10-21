@@ -144,7 +144,7 @@ async function loadVegetacionCategorica(url){
 }
 
 // Llama con tu archivo:
-loadVegetacionCategorica('geojson/vegetacion.geojson');
+loadVegetacionCategorica('vegetacion_small.geojson');
 
 const puntosLayer = L.geoJSON(null, {
   pane: 'pane-caminos',
@@ -158,12 +158,12 @@ async function loadshape(url){
   puntosLayer.addData(data);
 }
 
-loadshape('geojson/caminos.geojson');
+loadshape('caminos.geojson');
 
 // ================================
 // 2) GEOJSON AREAS PROTEGIDAS (medio)
 // ================================
-const urlGeoJSONAreas = 'geojson/areas_prot_line.geojson';
+const urlGeoJSONAreas = 'areas_prot_line.geojson';
 const estiloAreas = {
   color: '#000000',
   weight: 2,
@@ -457,3 +457,4 @@ setInterval(() => {
   // rutaLayer.addTo(map); // vegetación ya se carga con loadGeoJSONInto
   await loadFirmsAndRender();
 })();
+
